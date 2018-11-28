@@ -1,5 +1,7 @@
 # Java_FurtherOOProgramming
 
+Note to self: This repo is saved as the directory "LSE/Term 1/MA407 Algorithms & Computation/Week 8/MyCode_Week8"  
+
 Def<sup>n</sup>: A **greedy algorithm** works in iterations as such  
       (i) In each iteration, we choose what is optimal at that point.  
       (ii) We pray that choosing a local optimum each time will give us a global optimum at the end.  
