@@ -26,4 +26,11 @@ For step 3, we use a method called Huffman encoding.
 
 Def<sup>n</sup>: A code C is a [prefix code](https://en.wikipedia.org/wiki/Prefix_code) if for each pair w, w' in C of distinct codewords, w is not a prefix of w'. Observe that prefix codes are uniquely decodeable.  
 
-Please don't make me type a whole article on the Huffman algorithm. [Here's a link](https://en.wikipedia.org/wiki/Huffman_coding)!
+## [Huffman Algorithm](https://en.wikipedia.org/wiki/Huffman_coding)
+We construct a tree using the Huffman algorithm, where each node is known as a Huffman node. Here, a node is a (value, frequency) pair.
+Here are the simplified steps of the algorithm of constructing a tree bottom up: 
+1. Sort the nodes by frequency, giving us an ordered sequence *L* of (value, frequency) pairs.  
+2. Take the two elements x = (value<sub>x</sub>, frequency<sub>x</sub>) and y = (value<sub>y</sub>, frequency<sub>y</sub>) of lowest frequencies and assign them to be leaves of the tree.  
+3. Create a parent node z = (value<sub>z</sub>, frequency<sub>x</sub> + frequency<sub>y</sub>), where the parent node has frequency equal the sum of its 2 child nodes. Do not assign a value for z.  
+4. Remove x and y from the ordered sequence *L* and insert z.  
+5. Repeat until all nodes have been used up.  
