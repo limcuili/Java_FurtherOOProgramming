@@ -12,7 +12,27 @@ public class CodeBook {
     }
 
     public void insert(char s, String c) {
-        // inserts a new entry in the codebook, expressing that character s has codeword c
+        Item item = new Item();
+        item.character = s;
+        item.codeword = c;
+        item.next = null;
+        if (start == null) {
+            start = item;
+            return;
+        }
+        Item q = null;
+        Item p = start;
+        while (p != null && p.character < item.character) {
+            q = p; // q stores the largest p s.t. p.character < item.character
+            p = p.next; // p ends up being s.t. p.character >= item.character
+        }
+        if (q == null) { // either list is empty or item.character < p.character. So put item in front of list.
+            item.next = start;
+            start = item;
+        } else {
+            item.next = p; // insert item before p
+            q.next = item; // insert item after q, ie. q -> item -> p
+        }
     }
 
     public String codeFor(char s) {
