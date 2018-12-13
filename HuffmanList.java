@@ -15,8 +15,8 @@ public class HuffmanList {
             min = item;
             return;
         }
-        item q = null;
-        item p = min;
+        Item q = null;
+        Item p = min;
         while (p != null && p.node.frequency < n.frequency) {
             q = p;
             p = p.next;
