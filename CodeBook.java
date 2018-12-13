@@ -16,7 +16,15 @@ public class CodeBook {
     }
 
     public String codeFor(char s) {
-        // returns the codeword for s if it exists in the codebook and null otherwise
+        Item p = start;
+        while (p != null && p.character != s) {
+            p = p.next;
+        }
+        if (p == null) {
+            return null;
+        } else {
+            return p.codeword;
+        }
     }
 
     public void print() {
@@ -25,7 +33,6 @@ public class CodeBook {
             System.out.println(p.character + "->" + p.codeword);
             p = p.next;
         }
-        // for each entry in the codebook with character s and codeword c it prints a line of the form s -> c
     }
 
     public int length() {
