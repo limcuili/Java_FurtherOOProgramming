@@ -4,6 +4,7 @@
 public class CodeBook {
 
     private Item start = null;
+    private int length = 0;
 
     private class Item {
         char character;
@@ -12,6 +13,7 @@ public class CodeBook {
     }
 
     public void insert(char s, String c) {
+        length++;
         Item item = new Item();
         item.character = s;
         item.codeword = c;
@@ -55,8 +57,6 @@ public class CodeBook {
         }
     }
 
-    public int length() {
-        // returns how many characters (together with their encodings) are stored in this codebook
-    }
+    public int length() { return length; }
 
 }
