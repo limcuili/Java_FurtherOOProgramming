@@ -3,6 +3,14 @@
 
 public class CodeBook {
 
+    private Item start = null;
+
+    private class Item {
+        char character;
+        String codeword;
+        Item next;
+    }
+
     public void insert(char s, String c) {
         // inserts a new entry in the codebook, expressing that character s has codeword c
     }
@@ -12,6 +20,11 @@ public class CodeBook {
     }
 
     public void print() {
+        Item p = start;
+        while (p != null) {
+            System.out.println(p.character + "->" + p.codeword);
+            p = p.next;
+        }
         // for each entry in the codebook with character s and codeword c it prints a line of the form s -> c
     }
 
