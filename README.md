@@ -1,7 +1,5 @@
 # Java_FurtherOOProgramming
 
-Note to self: This repo is saved as the directory "LSE/Term 1/MA407 Algorithms & Computation/Week 8/MyCode_Week8"  
-
 Firstly, my apologies to my coaches at Makers who taught me that code should speak for itself and therefore should not contain many comments.  
 I argue that my training as a mathematician steers me towards putting more information than is necessary - since the math is getting complicated, I am including comments to make my thought process and future referencing easier. 
 
